@@ -35,7 +35,7 @@ export default defineConfig({
 `);
   const manifest=JSON.parse(fs.readFileSync(path.join(packageRoot,'package.json'),'utf8'));
   // A standalone skill contains the runtime, but not sibling skills or the vendor bundle.
-  for(const name of (manifest.qaStandaloneSkill ? [] : ['playwright-cli-tests','playwright-mcp-cases','playwright-cli'])) {
+  for(const name of (manifest.qaStandaloneSkill ? [] : ['playwright-qa','playwright-cli'])) {
     const source=path.join(packageRoot,name==='playwright-cli'?'vendor':'skills',name);
     for(const client of ['.gigacode']) {
       const relative=path.join(client,'skills',name), dest=path.join(root,relative);

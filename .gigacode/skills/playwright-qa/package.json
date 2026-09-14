@@ -6,7 +6,7 @@
   "engines": {
     "node": ">=22"
   },
-  "qaStandaloneSkill": "playwright-cli-tests",
+  "qaStandaloneSkill": "playwright-qa",
   "bin": {
     "playwright-qa": "scripts/cli.mjs"
   },
