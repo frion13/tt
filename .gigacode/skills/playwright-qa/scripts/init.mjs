@@ -19,7 +19,7 @@ export function initProject(root) {
   save('config/profiles.json','{}\n');
   save('config/sources.json',fs.readFileSync(path.join(packageRoot,'config/sources.json'),'utf8'));
   save('config/registry.json','{}\n');
-  save('.env.example','# Fill local .env or CI; actual values must not be committed.\nJIRA_BASE_URL=\nJIRA_LOGIN=\nJIRA_PASSWORD=\nWIKI_BASE_URL=\nWIKI_LOGIN=\nWIKI_PASSWORD=\n');
+  save('.env.example','# Fill local .env or CI; actual values must not be committed.\n# Source names are examples; map your own env names in config/sources.json.\n# CASE_PORTAL_BASE_URL=\n# CASE_PORTAL_LOGIN=\n# CASE_PORTAL_PASSWORD=\n# DOCS_PORTAL_BASE_URL=\n# DOCS_PORTAL_LOGIN=\n# DOCS_PORTAL_PASSWORD=\n');
   save('config/playwright-mcp.example.json',fs.readFileSync(path.join(packageRoot,'config/playwright-mcp.example.json'),'utf8'));
   save('.playwright/cli.config.json',JSON.stringify({browser:{contextOptions:{ignoreHTTPSErrors:true}}},null,2)+'\n');
   const configs=['ts','js','mts','mjs','cts','cjs'].map(ext=>`playwright.config.${ext}`);

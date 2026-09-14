@@ -32,7 +32,7 @@ npx --no-install playwright-qa run test-cases/ID.md
 
 `plan` выдаёт create/update/run/blocked по реестру и SHA256 Markdown. Для create исследуй UI и напиши spec, для update сопоставь изменения с кодом, для run используй существующий. Не перерегистрируй изменённый кейс без проверки соответствия. В spec каждый шаг выполняй через `await step(id, async () => { ...assertions; return фактическое_наблюдение; })`.
 
-Данные текущего проекта: config/profiles.json, config/sources.json, config/registry.json, локальный .env/окружение CI. Профили, креды и кейсы из пакета-разработки не переносятся. Jira/Wiki описываются отдельно; `playwright-qa source jira <URL>` только проверяет профиль/адрес, без печати пароля. Форму авторизации исследует агент. Ошибки TLS игнорируются для всех сайтов в тестовых браузерах.
+Данные текущего проекта: config/profiles.json, config/sources.json, config/registry.json, локальный .env/окружение CI. Профили, креды и кейсы из пакета-разработки не переносятся. Профили источников описываются отдельно; `playwright-qa source case-portal <URL>` только проверяет профиль/адрес, без печати пароля. Форму авторизации исследует агент. Ошибки TLS игнорируются для всех сайтов в тестовых браузерах.
 
 Для MCP-журнала: `playwright-qa report evidence/journal.json`. Для классификации бага: `playwright-qa bug reports/automation/<run-id>/summary.json evidence/assessment.json`. Выполняй через `npx --no-install` либо локальный npm script проекта. Результаты сохраняются внутри целевого проекта в reports/. Его имя произвольно. Для запуска из другой папки передай `--project /path/to/project`; все относительные пути тогда считаются от этого корня.
 

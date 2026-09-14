@@ -1,18 +1,1 @@
-{
-  "jira": {
-    "auth": "password",
-    "env": {
-      "baseURL": "JIRA_BASE_URL",
-      "login": "JIRA_LOGIN",
-      "password": "JIRA_PASSWORD"
-    }
-  },
-  "wiki": {
-    "auth": "password",
-    "env": {
-      "baseURL": "WIKI_BASE_URL",
-      "login": "WIKI_LOGIN",
-      "password": "WIKI_PASSWORD"
-    }
-  }
-}
+{}
